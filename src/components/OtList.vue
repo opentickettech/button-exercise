@@ -7,8 +7,10 @@
             <!-- TODO: implement loop for displaying the items of the list property -->
            <div class="list__item">
                 <div class="list__item__name">Name</div>
-                <div class="list__item__seed_count">2</div>
-                <div class="list__item__last_updated">20-02-2024</div>
+                <div class="list__item__meta">
+                    <div class="list__item__seed_count">2</div>
+                    <div class="list__item__last_updated">20-02-2024</div>
+                </div>
             </div>
         </div>
     </div>
@@ -36,7 +38,8 @@ defineProps(['list']);
         margin: 0.5rem;
         padding: 0.5rem 1rem;
 
-        &__seed_count, &__last_updated {
+        &__meta {
+            text-align: right;
             font-size: 1rem;
         }
     }
