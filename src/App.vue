@@ -13,10 +13,9 @@
 import OtButton from "./components/OtButton.vue";
 import OtList from "./components/OtList.vue";
 import { ref } from "vue";
-import { ListItem } from "./types.ts";
 
 // TODO: implement name, seed_count and last_updated attribute
-const list = ref<ListItem[]>([]);
+const list = ref([]);
 
 // TODO: Fetch content from API when the button is clicked.
 // TODO: Set the loading state of the button and forward the data to the list when ready.
@@ -30,6 +29,7 @@ function fetchContentAndAppendToList() {
 <style scoped>
 .app-wrapper {
     display: flex;
+    align-items: center;
     font-size: 2rem;
 }
 
