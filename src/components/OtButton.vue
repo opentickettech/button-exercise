@@ -24,30 +24,29 @@ const message = computed(() => {
 
 <style scoped lang="scss">
 .button-wrapper {
-    position: relative;
+    & button{
+        min-width: 15rem;
+        min-height: 5rem;
+        position: relative;
 
-    & .is-loading:after {
-        animation: spinAround 1s infinite linear;
-        border-radius: 3rem;
-        font-family: "OpenTicketIcons" !important;
-        border-right-color: transparent;
-        border-top-color: transparent;
-        content: "\f145";
-        display: block;
-        position: absolute;
-        height: 1em;
-        width: 1em;
-        top: calc(50% - (0.5em));
-        left: calc(50% - (0.8em));
-    }
+        &.loading:after {
+            animation: spinAround 1s infinite linear;
+            font-family: "OpenTicketIcons" !important;
+            content: "\f145";
+            display: block;
+            position: absolute;
+            width: 3rem;
+            height: 2rem;
+            top: calc(50% - 1rem);
+            left: calc(50% - 1.5rem);
+        }
 
-    & .disabled {
-        cursor: not-allowed;
-        opacity: 0.7;
-        color: grey;
-        pointer-events: none;
+        &.disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+            color: grey;
+            pointer-events: none;
+        }
     }
 }
-
-
 </style>
